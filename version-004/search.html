@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全站搜索-国产影视免费在线播放</title>
+  <meta name="description" content="搜索国产影视高清免费视频资源，支持按片名、题材、地区、年份、标签和分类查找可在线观看内容。">
+  <meta name="keywords" content="影视搜索,视频搜索,在线观看,国产影视·免费视频在线观看平台：高清大片与推荐榜-国产好剧推荐,国产,视频,免费,在线观看,高清,影视大全">
+  <link rel="stylesheet" href="./assets/base.css">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./index.html" aria-label="国产影视">
+      <span class="brand-mark">影</span>
+      <span class="brand-copy">
+        <strong>国产影视</strong>
+        <small>免费在线播放</small>
+      </span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a class="nav-link" href="./index.html">首页</a>
+      <a class="nav-link" href="./categories.html">分类</a>
+      <a class="nav-link" href="./ranking.html">排行榜</a>
+      <a class="nav-link is-active" href="./search.html">搜索</a>
+      <a class="nav-link nav-link-muted" href="./category-premium-movies.html">高清大片</a>
+      <a class="nav-link nav-link-muted" href="./category-domestic-picks.html">国产精选</a>
+      <a class="nav-link nav-link-muted" href="./category-suspense-crime.html">悬疑犯罪</a>
+      <a class="nav-link nav-link-muted" href="./category-action-war.html">动作战争</a>
+    </nav>
+    <form class="header-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索视频..." aria-label="搜索视频">
+      <button type="submit">搜索</button>
+    </form>
+    <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-label="打开导航">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="移动导航">
+    <a href="./index.html">首页</a>
+    <a href="./categories.html">分类</a>
+    <a href="./ranking.html">排行榜</a>
+    <a href="./search.html">搜索</a>
+    <a href="./category-premium-movies.html">高清大片</a>
+    <a href="./category-domestic-picks.html">国产精选</a>
+    <a href="./category-suspense-crime.html">悬疑犯罪</a>
+    <a href="./category-action-war.html">动作战争</a>
+    <a href="./category-love-drama.html">爱情剧情</a>
+    <a href="./category-comedy-family.html">喜剧家庭</a>
+    <a href="./category-horror-thriller.html">恐怖惊悚</a>
+    <a href="./category-fantasy-scifi.html">科幻奇幻</a>
+    <a href="./category-asia-series.html">日韩剧集</a>
+    <a href="./category-global-cinema.html">欧美影库</a>
+    <form class="mobile-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索影片、演员、类型">
+      <button type="submit">搜索</button>
+    </form>
+  </nav>
+</header>
+<main class="page-main">
+  <section class="page-hero search-hero">
+    <div class="container">
+      <span class="hero-badge">全站搜索</span>
+      <h1>搜索影片与剧集</h1>
+      <p>输入片名、题材、地区、年份或标签，快速查找全站影视内容。</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="container">
+      <form class="search-page-form" id="search-page-form">
+        <input type="search" id="search-query" name="q" placeholder="输入关键词，例如 悬疑、韩国、2026" autocomplete="off">
+        <select id="search-category" aria-label="分类筛选">
+          <option value="">全部分类</option>
+          <option value="高清大片">高清大片</option>
+          <option value="国产精选">国产精选</option>
+          <option value="悬疑犯罪">悬疑犯罪</option>
+          <option value="动作战争">动作战争</option>
+          <option value="爱情剧情">爱情剧情</option>
+          <option value="喜剧家庭">喜剧家庭</option>
+          <option value="恐怖惊悚">恐怖惊悚</option>
+          <option value="科幻奇幻">科幻奇幻</option>
+          <option value="日韩剧集">日韩剧集</option>
+          <option value="欧美影库">欧美影库</option>
+        </select>
+        <select id="search-region" aria-label="地区筛选">
+          <option value="">全部地区</option>
+          <option value="中国">中国</option>
+          <option value="韩国">韩国</option>
+          <option value="日本">日本</option>
+          <option value="美国">美国</option>
+          <option value="英国">英国</option>
+          <option value="法国">法国</option>
+          <option value="意大利">意大利</option>
+          <option value="西班牙">西班牙</option>
+        </select>
+        <button type="submit">搜索</button>
+      </form>
+      <div class="movie-grid search-results" id="search-results"></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <span class="brand-mark">影</span>
+        <div>
+          <strong>国产影视</strong>
+          <small>免费在线播放</small>
+        </div>
+      </div>
+      <p>国产影视免费视频在线观看平台，主打高清大片与实时推荐榜。提供全面的视频资源点播服务，支持免费观看，更新及时。</p>
+    </div>
+    <div>
+      <h3>快速导航</h3>
+      <ul>
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./categories.html">分类总览</a></li>
+        <li><a href="./ranking.html">热门榜单</a></li>
+        <li><a href="./search.html">全站搜索</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>热门频道</h3>
+      <ul>
+          <li><a href="./category-premium-movies.html">高清大片</a></li>
+          <li><a href="./category-domestic-picks.html">国产精选</a></li>
+          <li><a href="./category-suspense-crime.html">悬疑犯罪</a></li>
+          <li><a href="./category-action-war.html">动作战争</a></li>
+          <li><a href="./category-love-drama.html">爱情剧情</a></li>
+          <li><a href="./category-comedy-family.html">喜剧家庭</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 国产影视 · 高清大片与推荐榜</div>
+</footer>
+<script src="./assets/app.js"></script>
+<script src="./assets/search-index.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
